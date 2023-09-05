@@ -1,0 +1,138 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Standard</Mode>
+    <AoCore index="0" sample_clock="clk50m" trig_type="0" storage_depth="1024" window_num="1" capture_amount="1024" trigger_pos="512" module_name="top" force_trigger_by_falling_edge="false">
+        <SignalList>
+            <Signal>udp_inst/crs</Signal>
+            <Bus name="udp_inst/ethernet_resolve_status[7:0]">
+                <Signal>udp_inst/ethernet_resolve_status[7]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[6]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[5]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[4]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[3]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[2]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[1]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[0]</Signal>
+            </Bus>
+            <Bus name="udp_inst/arp_rpy_status[7:0]">
+                <Signal>udp_inst/arp_rpy_status[7]</Signal>
+                <Signal>udp_inst/arp_rpy_status[6]</Signal>
+                <Signal>udp_inst/arp_rpy_status[5]</Signal>
+                <Signal>udp_inst/arp_rpy_status[4]</Signal>
+                <Signal>udp_inst/arp_rpy_status[3]</Signal>
+                <Signal>udp_inst/arp_rpy_status[2]</Signal>
+                <Signal>udp_inst/arp_rpy_status[1]</Signal>
+                <Signal>udp_inst/arp_rpy_status[0]</Signal>
+            </Bus>
+            <Bus name="udp_inst/test_data[7:0]">
+                <Signal>udp_inst/test_data[7]</Signal>
+                <Signal>udp_inst/test_data[6]</Signal>
+                <Signal>udp_inst/test_data[5]</Signal>
+                <Signal>udp_inst/test_data[4]</Signal>
+                <Signal>udp_inst/test_data[3]</Signal>
+                <Signal>udp_inst/test_data[2]</Signal>
+                <Signal>udp_inst/test_data[1]</Signal>
+                <Signal>udp_inst/test_data[0]</Signal>
+            </Bus>
+            <Bus name="udp_inst/rx_data_s[7:0]">
+                <Signal>udp_inst/rx_data_s[7]</Signal>
+                <Signal>udp_inst/rx_data_s[6]</Signal>
+                <Signal>udp_inst/rx_data_s[5]</Signal>
+                <Signal>udp_inst/rx_data_s[4]</Signal>
+                <Signal>udp_inst/rx_data_s[3]</Signal>
+                <Signal>udp_inst/rx_data_s[2]</Signal>
+                <Signal>udp_inst/rx_data_s[1]</Signal>
+                <Signal>udp_inst/rx_data_s[0]</Signal>
+            </Bus>
+            <Signal>udp_inst/fifo_in</Signal>
+            <Bus name="rtp_state[7:0]">
+                <Signal>rtp_state[7]</Signal>
+                <Signal>rtp_state[6]</Signal>
+                <Signal>rtp_state[5]</Signal>
+                <Signal>rtp_state[4]</Signal>
+                <Signal>rtp_state[3]</Signal>
+                <Signal>rtp_state[2]</Signal>
+                <Signal>rtp_state[1]</Signal>
+                <Signal>rtp_state[0]</Signal>
+            </Bus>
+            <Bus name="rx_data[7:0]">
+                <Signal>rx_data[7]</Signal>
+                <Signal>rx_data[6]</Signal>
+                <Signal>rx_data[5]</Signal>
+                <Signal>rx_data[4]</Signal>
+                <Signal>rx_data[3]</Signal>
+                <Signal>rx_data[2]</Signal>
+                <Signal>rx_data[1]</Signal>
+                <Signal>rx_data[0]</Signal>
+            </Bus>
+            <Bus name="note_pitch[7:0]">
+                <Signal>note_pitch[7]</Signal>
+                <Signal>note_pitch[6]</Signal>
+                <Signal>note_pitch[5]</Signal>
+                <Signal>note_pitch[4]</Signal>
+                <Signal>note_pitch[3]</Signal>
+                <Signal>note_pitch[2]</Signal>
+                <Signal>note_pitch[1]</Signal>
+                <Signal>note_pitch[0]</Signal>
+            </Bus>
+        </SignalList>
+        <Triggers>
+            <Trigger index="0">
+                <SignalList>
+                    <Signal>rtp_midi_in</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="1">
+                <SignalList>
+                    <Bus restorename="rtp_state[7:0]">
+                        <Signal>rtp_state[7]</Signal>
+                        <Signal>rtp_state[6]</Signal>
+                        <Signal>rtp_state[5]</Signal>
+                        <Signal>rtp_state[4]</Signal>
+                        <Signal>rtp_state[3]</Signal>
+                        <Signal>rtp_state[2]</Signal>
+                        <Signal>rtp_state[1]</Signal>
+                        <Signal>rtp_state[0]</Signal>
+                    </Bus>
+                </SignalList>
+            </Trigger>
+            <Trigger index="2"/>
+            <Trigger index="3"/>
+            <Trigger index="4"/>
+            <Trigger index="5"/>
+            <Trigger index="6"/>
+            <Trigger index="7"/>
+            <Trigger index="8"/>
+            <Trigger index="9"/>
+            <Trigger index="10"/>
+            <Trigger index="11"/>
+            <Trigger index="12"/>
+            <Trigger index="13"/>
+            <Trigger index="14"/>
+            <Trigger index="15"/>
+        </Triggers>
+        <MatchUnits>
+            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="1" counter_width="1" counter="1" countinuous="0" func="0" value0="1" value1="0" trigger="0"/>
+            <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="00011110" value1="00000000" trigger="1"/>
+            <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="7" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="9" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="10" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="11" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="12" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="13" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="14" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+        </MatchUnits>
+        <Expressions type="Static">
+            <Expression>M0</Expression>
+        </Expressions>
+    </AoCore>
+    <GAO_ID>0001000100110011</GAO_ID>
+</GAO_CONFIG>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" Register="170" Alu="23" Lut="262">
+    <SubModule name="PLL6m"/>
+    <SubModule name="clk_div4"/>
+    <SubModule name="osc1" Register="41" Alu="32" Lut="16">
+        <SubModule name="i4" Bsram="1"/>
+        <SubModule name="i5" Bsram="1"/>
+    </SubModule>
+    <SubModule name="i10" Register="23" Alu="4" Lut="20"/>
+    <SubModule name="udp_inst" Register="933" Alu="698" Lut="1432" Bsram="10">
+        <SubModule name="ct" Register="46" Lut="58"/>
+        <SubModule name="crc" Register="69" Alu="16" Lut="170" Bsram="1"/>
+        <SubModule name="ctct" Register="120" Alu="58" Lut="345" Bsram="1"/>
+        <SubModule name="udp_gen" Register="210" Alu="288" Lut="692" Bsram="1"/>
+    </SubModule>
+    <SubModule name="gw_gao_inst_0" Register="298" Lut="176" Bsram="1"/>
+</Module>

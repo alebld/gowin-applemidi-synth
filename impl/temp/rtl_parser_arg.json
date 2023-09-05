@@ -1,0 +1,68 @@
+{
+ "Files" : [
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/CRC_check.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/SMI_ct.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/gowin_rpll/gowin_rpll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/rmii.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/tx_ct.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/udp.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/udp_generator.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/DAC_controller.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/mixer.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/rom_lut_sin.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/rom_step_sin.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/alexb/Documents/ETH/src/gowin_clkdiv/gowin_clkdiv.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/alexb/Documents/ETH/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}

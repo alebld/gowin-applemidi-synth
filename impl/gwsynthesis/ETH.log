@@ -1,0 +1,111 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\CRC_check.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\SMI_ct.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\gowin_rpll\gowin_rpll.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\rmii.sv'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\top.v'
+Analyzing included file 'C:\Users\alexb\Documents\ETH\src\rmii.sv'("C:\Users\alexb\Documents\ETH\src\top.v":2)
+Back to file 'C:\Users\alexb\Documents\ETH\src\top.v'("C:\Users\alexb\Documents\ETH\src\top.v":2)
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\tx_ct.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\udp.v'
+Analyzing included file 'C:\Users\alexb\Documents\ETH\src\rmii.sv'("C:\Users\alexb\Documents\ETH\src\udp.v":25)
+Back to file 'C:\Users\alexb\Documents\ETH\src\udp.v'("C:\Users\alexb\Documents\ETH\src\udp.v":25)
+Undeclared symbol 'tx_bz', assumed default net type 'wire'("C:\Users\alexb\Documents\ETH\src\udp.v":749)
+Undeclared symbol 'tx_av', assumed default net type 'wire'("C:\Users\alexb\Documents\ETH\src\udp.v":750)
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\udp_generator.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\DAC_controller.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\mixer.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\rom_lut_sin.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\rom_step_sin.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\sine_nco.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\src\gowin_clkdiv\gowin_clkdiv.v'
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v'
+Analyzing included file 'C:\Users\alexb\Documents\ETH\impl\gwsynthesis\RTL_GAO\ao_0\gw_ao_top_define.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":133)
+Back to file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":133)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v'
+Analyzing included file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_define.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v":693)
+Back to file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v":693)
+Analyzing included file 'C:\Users\alexb\Documents\ETH\impl\gwsynthesis\RTL_GAO\ao_0\gw_ao_top_define.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v":693)
+Back to file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v":693)
+Analyzing included file 'C:\Users\alexb\Documents\ETH\impl\gwsynthesis\RTL_GAO\ao_0\gw_ao_parameter.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v":693)
+Back to file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v":693)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v'
+Analyzing included file 'C:\Users\alexb\Documents\ETH\impl\gwsynthesis\RTL_GAO\ao_control\gw_con_top_define.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v":367)
+Back to file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v":367)
+Analyzing included file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_parameter.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v":367)
+Back to file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v":367)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\gw_jtag.v'
+Analyzing Verilog file 'C:\Users\alexb\Documents\ETH\impl\gwsynthesis\RTL_GAO\gw_gao_top.v'
+Compiling module 'CRC_check'("C:\Users\alexb\Documents\ETH\src\CRC_check.v":1)
+Extracting RAM for identifier 'buffer'("C:\Users\alexb\Documents\ETH\src\CRC_check.v":14)
+Compiling module 'SMI_ct'("C:\Users\alexb\Documents\ETH\src\SMI_ct.v":24)
+Compiling module 'PLL_6M'("C:\Users\alexb\Documents\ETH\src\gowin_rpll\gowin_rpll.v":10)
+Compiling module 'tx_ct'("C:\Users\alexb\Documents\ETH\src\tx_ct.v":1)
+Extracting RAM for identifier 'buffer'("C:\Users\alexb\Documents\ETH\src\tx_ct.v":12)
+Compiling module 'udp_generator'("C:\Users\alexb\Documents\ETH\src\udp_generator.v":1)
+Extracting RAM for identifier 'buffer'("C:\Users\alexb\Documents\ETH\src\udp_generator.v":20)
+Extracting RAM for identifier 'udp_head_p1'("C:\Users\alexb\Documents\ETH\src\udp_generator.v":54)
+Extracting RAM for identifier 'udp_head_p2'("C:\Users\alexb\Documents\ETH\src\udp_generator.v":55)
+Compiling module 'DAC_controller'("C:\Users\alexb\Documents\ETH\src\DAC_controller.v":1)
+Compiling module 'mixer4'("C:\Users\alexb\Documents\ETH\src\mixer.v":1)
+Compiling module 'rom_lut_sin'("C:\Users\alexb\Documents\ETH\src\rom_lut_sin.v":1)
+Compiling module 'rom_step_sin'("C:\Users\alexb\Documents\ETH\src\rom_step_sin.v":1)
+Compiling module 'sine_nco'("C:\Users\alexb\Documents\ETH\src\sine_nco.v":1)
+WARN  (EX3771) : Module instantiation should have an instance name("C:\Users\alexb\Documents\ETH\src\sine_nco.v":16)
+WARN  (EX3670) : Actual bit length 8 differs from formal bit length 7 for port 'addr_i'("C:\Users\alexb\Documents\ETH\src\sine_nco.v":19)
+WARN  (EX3771) : Module instantiation should have an instance name("C:\Users\alexb\Documents\ETH\src\sine_nco.v":23)
+Compiling module 'Gowin_CLKDIV'("C:\Users\alexb\Documents\ETH\src\gowin_clkdiv\gowin_clkdiv.v":10)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":0)
+Extracting RAM for identifier '**'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":0)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v":0)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":0)
+Extracting RAM for identifier '**'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":0)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v":0)
+Compiling module 'GW_JTAG'("C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\gw_jtag.v":1)
+Compiling module 'gw_gao'("C:\Users\alexb\Documents\ETH\impl\gwsynthesis\RTL_GAO\gw_gao_top.v":1)
+Compiling module 'top'("C:\Users\alexb\Documents\ETH\src\top.v":5)
+WARN  (EX3771) : Module instantiation should have an instance name("C:\Users\alexb\Documents\ETH\src\top.v":70)
+WARN  (EX3771) : Module instantiation should have an instance name("C:\Users\alexb\Documents\ETH\src\top.v":78)
+Compiling module 'udp(ip_adr=32'b11000000101010000000111100001110,mac_adr=48'b000001100000000010101010101110110000110011011101,arp_refresh_interval=750000000,arp_max_life_time=1500000000,netrmii=rmii)'("C:\Users\alexb\Documents\ETH\src\udp.v":28)
+Extracting RAM for identifier 'rx_head_fifo'("C:\Users\alexb\Documents\ETH\src\udp.v":323)
+Extracting RAM for identifier 'rx_data_fifo'("C:\Users\alexb\Documents\ETH\src\udp.v":343)
+Extracting RAM for identifier 'arp_head'("C:\Users\alexb\Documents\ETH\src\udp.v":741)
+Extracting RAM for identifier 'tx_head_fifo'("C:\Users\alexb\Documents\ETH\src\udp.v":765)
+Extracting RAM for identifier 'tx_data_fifo'("C:\Users\alexb\Documents\ETH\src\udp.v":773)
+Extracting RAM for identifier 'data_rom'("C:\Users\alexb\Documents\ETH\src\udp.v":796)
+Compiling module 'udp_generator(ip_adr=32'b11000000101010000000111100001110)'("C:\Users\alexb\Documents\ETH\src\udp_generator.v":1)
+Extracting RAM for identifier 'buffer'("C:\Users\alexb\Documents\ETH\src\udp_generator.v":20)
+Extracting RAM for identifier 'udp_head_p1'("C:\Users\alexb\Documents\ETH\src\udp_generator.v":54)
+Extracting RAM for identifier 'udp_head_p2'("C:\Users\alexb\Documents\ETH\src\udp_generator.v":55)
+Trying to combine GAO to RTL design
+NOTE  (EX0101) : Current top module is "top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "mixer4" instantiated to "i9" is swept in optimizing("C:\Users\alexb\Documents\ETH\src\top.v":76)
+WARN  (NL0002) : The module "sine_nco" instantiated to "osc2" is swept in optimizing("C:\Users\alexb\Documents\ETH\src\top.v":54)
+WARN  (NL0002) : The module "rom_step_sin" instantiated to "i4" is swept in optimizing("C:\Users\alexb\Documents\ETH\src\sine_nco.v":21)
+WARN  (NL0002) : The module "rom_lut_sin" instantiated to "i5" is swept in optimizing("C:\Users\alexb\Documents\ETH\src\sine_nco.v":28)
+WARN  (NL0002) : The module "sine_nco" instantiated to "osc3" is swept in optimizing("C:\Users\alexb\Documents\ETH\src\top.v":61)
+WARN  (NL0002) : The module "rom_step_sin" instantiated to "i4" is swept in optimizing("C:\Users\alexb\Documents\ETH\src\sine_nco.v":21)
+WARN  (NL0002) : The module "rom_lut_sin" instantiated to "i5" is swept in optimizing("C:\Users\alexb\Documents\ETH\src\sine_nco.v":28)
+WARN  (NL0002) : The module "sine_nco" instantiated to "osc4" is swept in optimizing("C:\Users\alexb\Documents\ETH\src\top.v":68)
+WARN  (NL0002) : The module "rom_step_sin" instantiated to "i4" is swept in optimizing("C:\Users\alexb\Documents\ETH\src\sine_nco.v":21)
+WARN  (NL0002) : The module "rom_lut_sin" instantiated to "i5" is swept in optimizing("C:\Users\alexb\Documents\ETH\src\sine_nco.v":28)
+[95%] Generate netlist file "C:\Users\alexb\Documents\ETH\impl\gwsynthesis\ETH.vg" completed
+[100%] Generate report file "C:\Users\alexb\Documents\ETH\impl\gwsynthesis\ETH_syn.rpt.html" completed
+GowinSynthesis finish

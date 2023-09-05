@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW2A-18C" package="PBGA256" speed="8" partNumber="GW2A-LV18PG256C8/I7"/>
+    <FileList>
+        <File path="C:\Users\alexb\Documents\ETH\src\CRC_check.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\SMI_ct.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\gowin_rpll\gowin_rpll.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\rmii.sv" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\top.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\tx_ct.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\udp.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\udp_generator.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\DAC_controller.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\mixer.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\rom_lut_sin.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\rom_step_sin.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\sine_nco.v" type="verilog"/>
+        <File path="C:\Users\alexb\Documents\ETH\src\gowin_clkdiv\gowin_clkdiv.v" type="verilog"/>
+        <File path="C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v" type="gao"/>
+        <File path="C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v" type="gao"/>
+        <File path="C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v" type="gao"/>
+        <File path="C:\Gowin\Gowin_V1.9.8.11_Education\IDE\data\ipcores\gw_jtag.v" type="gao"/>
+        <File path="C:\Users\alexb\Documents\ETH\impl\gwsynthesis\RTL_GAO\gw_gao_top.v" type="gao"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="dsp_balance" value="0"/>
+        <Option type="include_path" value="C:/Gowin/Gowin_V1.9.8.11_Education/IDE/data/ipcores/GAO_LITE"/>
+        <Option type="include_path" value="C:/Users/alexb/Documents/ETH/impl/gwsynthesis/RTL_GAO"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="C:\Users\alexb\Documents\ETH\impl\gwsynthesis\ETH.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

@@ -1,0 +1,46 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Lite</Mode>
+    <AoCore_Lite index="0" sample_clock="clk50m" trig_type="0" capture_amount="1024" implemention="0" input_register_enabled="1" capture_init_data_enabled="1" module_name="top">
+        <SignalList>
+            <Bus name="udp_inst/rx_data_s[7:0]">
+                <Signal>udp_inst/rx_data_s[7]</Signal>
+                <Signal>udp_inst/rx_data_s[6]</Signal>
+                <Signal>udp_inst/rx_data_s[5]</Signal>
+                <Signal>udp_inst/rx_data_s[4]</Signal>
+                <Signal>udp_inst/rx_data_s[3]</Signal>
+                <Signal>udp_inst/rx_data_s[2]</Signal>
+                <Signal>udp_inst/rx_data_s[1]</Signal>
+                <Signal>udp_inst/rx_data_s[0]</Signal>
+            </Bus>
+            <Bus name="udp_inst/rx_state[7:0]">
+                <Signal>udp_inst/rx_state[7]</Signal>
+                <Signal>udp_inst/rx_state[6]</Signal>
+                <Signal>udp_inst/rx_state[5]</Signal>
+                <Signal>udp_inst/rx_state[4]</Signal>
+                <Signal>udp_inst/rx_state[3]</Signal>
+                <Signal>udp_inst/rx_state[2]</Signal>
+                <Signal>udp_inst/rx_state[1]</Signal>
+                <Signal>udp_inst/rx_state[0]</Signal>
+            </Bus>
+            <Bus name="udp_inst/ethernet_resolve_status[7:0]">
+                <Signal>udp_inst/ethernet_resolve_status[7]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[6]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[5]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[4]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[3]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[2]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[1]</Signal>
+                <Signal>udp_inst/ethernet_resolve_status[0]</Signal>
+            </Bus>
+            <Signal>udp_inst/crs</Signal>
+            <Bus name="udp_inst/rxd[1:0]">
+                <Signal>udp_inst/rxd[1]</Signal>
+                <Signal>udp_inst/rxd[0]</Signal>
+            </Bus>
+            <Signal>netrmii.rx_crs</Signal>
+        </SignalList>
+    </AoCore_Lite>
+    <GAO_ID>0010100111110110</GAO_ID>
+</GAO_CONFIG>

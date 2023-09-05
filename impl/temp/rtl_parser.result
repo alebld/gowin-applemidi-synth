@@ -1,0 +1,190 @@
+[
+ {
+  "InstFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+  "InstLine" : 5,
+  "InstName" : "top",
+  "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+  "ModuleLine" : 5,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+    "InstLine" : 28,
+    "InstName" : "PLL6m",
+    "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/gowin_rpll/gowin_rpll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "PLL_6M"
+   },
+   {
+    "InstFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+    "InstLine" : 34,
+    "InstName" : "clk_div4",
+    "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/gowin_clkdiv/gowin_clkdiv.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_CLKDIV"
+   },
+   {
+    "InstFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+    "InstLine" : 42,
+    "InstName" : "osc1",
+    "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "sine_nco",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+      "InstLine" : 16,
+      "InstName" : "i4",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/rom_step_sin.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "rom_step_sin"
+     },
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+      "InstLine" : 23,
+      "InstName" : "i5",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/rom_lut_sin.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "rom_lut_sin"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+    "InstLine" : 49,
+    "InstName" : "osc2",
+    "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "sine_nco",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+      "InstLine" : 16,
+      "InstName" : "i4",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/rom_step_sin.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "rom_step_sin"
+     },
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+      "InstLine" : 23,
+      "InstName" : "i5",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/rom_lut_sin.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "rom_lut_sin"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+    "InstLine" : 56,
+    "InstName" : "osc3",
+    "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "sine_nco",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+      "InstLine" : 16,
+      "InstName" : "i4",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/rom_step_sin.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "rom_step_sin"
+     },
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+      "InstLine" : 23,
+      "InstName" : "i5",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/rom_lut_sin.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "rom_lut_sin"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+    "InstLine" : 63,
+    "InstName" : "osc4",
+    "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "sine_nco",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+      "InstLine" : 16,
+      "InstName" : "i4",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/rom_step_sin.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "rom_step_sin"
+     },
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/sine_nco.v",
+      "InstLine" : 23,
+      "InstName" : "i5",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/rom_lut_sin.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "rom_lut_sin"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+    "InstLine" : 70,
+    "InstName" : "i9",
+    "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/mixer.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "mixer4"
+   },
+   {
+    "InstFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+    "InstLine" : 78,
+    "InstName" : "i10",
+    "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/DAC_controller.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "DAC_controller"
+   },
+   {
+    "InstFile" : "C:/Users/alexb/Documents/ETH/src/top.v",
+    "InstLine" : 134,
+    "InstName" : "udp_inst",
+    "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/udp.v",
+    "ModuleLine" : 28,
+    "ModuleName" : "udp",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/udp.v",
+      "InstLine" : 108,
+      "InstName" : "ct",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/SMI_ct.v",
+      "ModuleLine" : 24,
+      "ModuleName" : "SMI_ct"
+     },
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/udp.v",
+      "InstLine" : 722,
+      "InstName" : "crc",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/CRC_check.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "CRC_check"
+     },
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/udp.v",
+      "InstLine" : 744,
+      "InstName" : "ctct",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/tx_ct.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "tx_ct"
+     },
+     {
+      "InstFile" : "C:/Users/alexb/Documents/ETH/src/udp.v",
+      "InstLine" : 1108,
+      "InstName" : "udp_gen",
+      "ModuleFile" : "C:/Users/alexb/Documents/ETH/src/udp_generator.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "udp_generator"
+     }
+    ]
+   }
+  ]
+ }
+]
