@@ -13,8 +13,7 @@ This project is just a proof of concept to learn how to implement various commun
 
 ## Development
 
-The project is still a work in progress. At the moment, .
-What remains to do:
+The project is still a work in progress. What remains to do:
 - Better implementation of the AppleMIDI protocol (e.g. at the moment the synchronization between the devices is not really implemented).
 - Full support of the MIDI messages (now only note on and note off without velocity are used)
 - Refactoring of most parts of the code which at the moment are not very readable.
