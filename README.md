@@ -2,15 +2,14 @@
 
 ## Overview
 
-This repository contains the SystemVerilog source code for an RTP-MIDI AppleMIDI synthesizer designed to run on the Gowin GW2A-18 FPGA. AppleMIDI is a protocol commonly used for real-time musical instrument communication over Ethernet, making it suitable for various music production and performance applications involving far away devices. 
+This repository contains the SystemVerilog source code for an RTP-MIDI (AppleMIDI) synthesizer designed to run on the Gowin GW2A-18 FPGA. AppleMIDI is a protocol commonly used for real-time musical instrument communication over Ethernet, making it suitable for various music production and performance applications involving far away devices. 
 This project is just a proof of concept to learn how to implement various communication protocols over Ethernet, nonetheless it may be useful to those seeking to achieve similar results.
 
 ## Features
 
-- RTP-MIDI protocol support for seamless integration with other MIDI devices and software.
-- Real-time synthesis capabilities for generating musical tones and effects.
-- Low-latency Ethernet communication for real-time musical applications.
-- User-friendly interface for configuring and controlling the synthesizer.
+- ARP and basic UDP messagge implementation.
+- Almost full AppleMIDI compatibility
+- basic real-time sound synthesis for generating musical tones.
 
 ## Development
 
