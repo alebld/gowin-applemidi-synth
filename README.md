@@ -24,4 +24,4 @@ The project is still a work in progress. What remains to do:
 
 ## Acknowledgments
 
-This projects is based on the [URP and ARP implementation on the same board](https://github.com/sipeed/TangPrimer-20K-example/tree/main/Ethernet/verilog_UDP).
+This projects is based on the [UDP and ARP implementation on the same board](https://github.com/sipeed/TangPrimer-20K-example/tree/main/Ethernet/verilog_UDP).
