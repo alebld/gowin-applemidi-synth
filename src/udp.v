@@ -43,28 +43,11 @@ logic rphyrst;
 // Assigning netrmii.mdc to the 1 MHz clock
 assign netrmii.mdc = clk1m;
 
-// Declaration of PHY-related signals
-
+/////////////////////////////////////////////////////////////////////////////////////// MDIO MANAGEMENT ///////////////////////////////////////////////////////////////////////////////////////     
+    
 //SMI = Serial Management Interface
 //Before a register access, PHY devices generally require a preamble of 32 ones to be sent by the MAC on the MDIO line
 //During a write command, the MAC provides address and data. For a read command, the PHY takes over the MDIO line during the turnaround bit times
-
-//MDIO PACKET FORMAT
-
-//PRE_32
-//0 1 2 3 4 5 6 7 8 9 A B C D E F
-//ST  OP  PA5       TA
-//0 1 2 3 4 5 6 7 8 9 A B C D E F
-//D16
-
-//PRE_32 Preamble, 32 bits all '1'
-
-//ST: start field '01'
-//OP: read = '01', write = '10'
-//PA5: 5 bits PHY address
-//RA5: 5 bits REGISTER address
-
-//D16: data to read or write
 
 logic phy_rdy;
 logic SMI_trg;
@@ -166,7 +149,7 @@ always_ff@(posedge clk1m or negedge rst) begin
     end
 end
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////// RX PREAMBLE ///////////////////////////////////////////////////////////////////////////////////////  
 
 // Assigning the PHY reset signal to 'phyrst' output
 assign phyrst = rphyrst;
@@ -255,8 +238,8 @@ always @(posedge clk50m or negedge phy_rdy) begin
     end
 end
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+/////////////////////////////////////////////////////////////////////////////////////// ETHERNET, IPV4 UDP AND ARP RX MANAGEMENT ///////////////////////////////////////////////////////////////////////////////////////  
+    
 logic [7:0] rx_data_gd; // Buffer for received data
 logic rx_data_rdy;      // Signal indicating the availability of received data
 logic rx_data_fin;      // Signal indicating the end of received data
@@ -580,6 +563,7 @@ always_ff@(posedge clk50m or negedge phy_rdy) begin
                 //14 15 16 17 SPA Sender Protocol Address
                 //18 19 20 21 22 23 THA Target Hardware Address
                 //24 25 26 27 TPA Target Protocol Address
+                
                 if (rx_data_byte_cnt == 20) begin
                     if (rx_info_buf == 48'h000108000604)
                         ethernet_resolve_status <= 31; // Valid ARP packet, proceed to next state (31)
@@ -657,9 +641,6 @@ always_ff@(posedge clk50m or negedge phy_rdy) begin
     end
 end
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 logic read_head;
 logic read_data;
 
@@ -714,8 +695,9 @@ CRC_check crc(
     .fin(rx_data_fin)
 );
 
+/////////////////////////////////////////////////////////////////////////////////////// ARP TX RESPONSE ///////////////////////////////////////////////////////////////////////////////////////  
+    
 // ARP packet response related logic
-
 logic test_tx_en;
 logic [7:0] test_data;
 byte arp_rpy_status;
@@ -767,65 +749,6 @@ always_ff@(posedge clk50m) begin
     tx_head_data_o_port <= tx_head_fifo[tx_head_fifo_tail];
     tx_data_data_o_port <= tx_data_fifo[tx_data_fifo_tail];
 end
-
-
-int tick_wt_cnt;
-int base_tick = 250000000;
-
-
-//data to write: 08004500002937f3400040116361c0a80f0fc0a80f10a3943039001524e054446762653436623433793563
-/* it's wrong , order should be reversed.
-logic [7:0] data_rom [42:0] = {8'h08, 8'h00, 8'h45, 8'h00, 8'h00, 8'h29, 8'h37, 8'hf3, 8'h40, 8'h00, 8'h40, 8'h11, 8'h63, 8'h61, 8'hc0, 8'ha8, 8'h0f, 8'h0f, 8'hc0, 8'ha8, 8'h0f, 8'h10, 8'ha3, 8'h94, 8'h30, 8'h39, 8'h00, 8'h15, 8'h24, 8'h65, 8'h05, 8'h44, 8'h46, 8'h76, 8'h65, 8'h34, 8'h36, 8'h62, 8'h34, 8'h33, 8'h79, 8'h35, 8'h63};
-*/
-logic [7:0] data_rom [42:0] = {8'h63, 8'h35, 8'h79, 8'h33, 8'h34, 8'h62, 8'h36, 8'h34, 8'h65, 8'h76, 8'h46, 8'h44, 8'h05, 8'hcc, 8'h94, 8'h15, 8'h00, 8'h39, 8'h30, 8'h94, 8'ha3, 8'h0f, 8'h0f, 8'ha8, 8'hc0, 8'h10, 8'h0f, 8'ha8, 8'hc0, 8'h61, 8'h63, 8'h11, 8'h40, 8'h00, 8'h40, 8'hf3, 8'h37, 8'h29, 8'h00, 8'h00, 8'h45, 8'h00, 8'h08};
-/*
-always_ff@(posedge clk50m or negedge phy_rdy)begin
-    if(phy_rdy==1'b0)begin
-        tx_head_fifo_head <= 0;
-        tx_data_fifo_head <= 0;
-        tick_wt_cnt <= 0;
-
-    end else begin
-        if(tx_head_data_i_en)
-            tx_head_fifo[tx_head_data_i_adr] <= tx_head_data_i_port;
-        tx_head_data_i_en <= 1'b0;
-        if(tx_data_data_i_en)
-            tx_data_fifo[tx_data_data_i_adr] <= tx_data_data_i_port;
-        tx_data_data_i_en <= 1'b0;
-
-        tick_wt_cnt <= tick_wt_cnt + 1;
-        if(tick_wt_cnt == base_tick*2)begin
-            tick_wt_cnt <= 0;
-        end
-
-        
-
-        if(tick_wt_cnt == base_tick)begin
-            tx_head_data_i_adr <= tx_head_fifo_head;
-            tx_head_data_i_en <= 1'b1;
-            tx_head_data_i_port <= {8'd192,8'd168,8'd15,8'd15};
-        end
-
-        if(tick_wt_cnt == base_tick+1)begin
-            tx_head_data_i_adr <= (tx_head_fifo_head+1)%64;
-            tx_head_data_i_en <= 1'b1;
-            tx_head_data_i_port <= {16'h0000,16'd55};
-        end
-
-        if(tick_wt_cnt >= base_tick && tick_wt_cnt < base_tick+43)begin
-            tx_data_data_i_adr <= (tx_data_fifo_head+tick_wt_cnt-base_tick)%8192;
-            tx_data_data_i_en <= 1'b1;
-            tx_data_data_i_port <= data_rom[tick_wt_cnt-base_tick];
-        end
-
-        if(tick_wt_cnt == base_tick+44)begin
-            tx_head_fifo_head <= (tx_head_fifo_head+2)%64;
-            tx_data_fifo_head <= (tx_data_fifo_head+43)%8192;
-        end
-    end
-end
-
-*/
 
 // ARP-related variables
 logic arp_lst_refresh;        // Indicates ARP list refresh
@@ -1000,83 +923,8 @@ always_ff@(posedge clk50m or negedge phy_rdy) begin
     end
 end
 
-
-
-/*
-int test_cntl;
-logic[31:0] ob_head_o;
-logic[7:0] ob_data_o;
-logic ob_head_en;
-logic ob_data_en;
-logic ob_fin;
-logic ob_busy;
-udp_generator #(.ip_adr(ip_adr)) udp_gen (
-    .clk(clk50m),.rst(phy_rdy),
-    .data(test_cntl[7:0]),
-    .tx_en(test_cntl<50),
-    .req(test_cntl == 100),
-    .ip_adr_i({8'd192,8'd168,8'd15,8'd15}),
-    .src_port(16'd1234),
-    .dst_port(16'd5678),
-    .head_o(ob_head_o),
-    .data_o(ob_data_o),
-    .head_en(ob_head_en),
-    .data_en(ob_data_en),
-    .fin(ob_fin),
-    .busy(ob_busy)
-);
-
-shortint head_cnt;
-shortint data_cnt;
-
-always@(posedge clk50m or negedge phy_rdy)begin
-    if(phy_rdy == 0)begin
-        head_cnt <= 0;
-        data_cnt <= 0;
-    end else begin
-        if(ob_head_en)
-            head_cnt <= head_cnt + 16'd1;
-        
-        if(ob_data_en)
-            data_cnt <= data_cnt + 16'd1;
-        
-        if(ob_fin)begin
-            head_cnt <= 0;
-            data_cnt <= 0;
-            tx_data_fifo_head <= (tx_data_fifo_head + data_cnt)%16'd8192;
-            tx_head_fifo_head <= (tx_head_fifo_head + head_cnt)%16'd64;
-        end
-
-        if(ob_data_en)begin
-            tx_data_fifo[(tx_data_fifo_head+data_cnt)%8192] <= ob_data_o;
-        end
-
-        if(ob_head_en)begin
-            tx_head_fifo[(tx_head_fifo_head+head_cnt)%64] <= ob_head_o;
-        end
-    end
-end
-
-always@(posedge clk50m)begin
-    test_cntl <= test_cntl + 1;
-    if(test_cntl > 50000000)test_cntl <= 0;
-
-end*/
-
-
-/*
-
-    input logic [31:0] tx_ip_i,
-    input logic [15:0] tx_src_port_i,
-    input logic [15:0] tx_dst_port_i,
-    input logic tx_req_i,
-    input logic [7:0] tx_data_i,
-    input logic tx_data_av,
-
-    output logic tx_req_rdy_o,
-    output logic tx_data_rdy_o
-    */
-
+/////////////////////////////////////////////////////////////////////////////////////// IPV4 UDP TX MANAGEMENT ///////////////////////////////////////////////////////////////////////////////////////  
+    
 // Declare signals for outbound packet generation
 logic [31:0] ob_head_o;    // Outbound packet header
 logic [7:0]  ob_data_o;    // Outbound packet data
@@ -1147,6 +995,5 @@ always @(posedge clk50m or negedge phy_rdy) begin
         end
     end
 end
-
 
 endmodule
