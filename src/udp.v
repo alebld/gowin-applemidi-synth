@@ -1,27 +1,3 @@
-//----------------------------------------------------------------------
-//   Licensed under the Apache License, Version 2.0 (the
-//   "License"); you may not use this file except in
-//   compliance with the License.  You may obtain a copy of
-//   the License at
-//
-//       http://www.apache.org/licenses/LICENSE-2.0
-//
-//   Unless required by applicable law or agreed to in
-//   writing, software distributed under the License is
-//   distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-//   CONDITIONS OF ANY KIND, either express or implied.  See
-//   the License for the specific language governing
-//   permissions and limitations under the License.
-//----------------------------------------------------------------------
-//----------------------------------------------------------------------
-// Author          : LAKKA
-// Mail            : Ja_P_S@outlook.com
-// File            : udp.sv
-//----------------------------------------------------------------------
-// Creation Date   : 06.05.2023
-//----------------------------------------------------------------------
-//
-
 `include "rmii.sv"
 
 // Definition of the UDP module with input and output parameters
@@ -135,7 +111,7 @@ always_ff@(posedge clk1m or negedge rst) begin
             if (SMI_ack && SMI_ready) begin
                 case (SMI_status)
                     0: begin
-                        // Initialize PHY
+                        //Set Register 31 Page Select Register to 7
                         SMI_adr <= 5'd31;
                         SMI_wdata <= 16'h7;
                         SMI_rw <= 1'b0; //write
@@ -143,19 +119,27 @@ always_ff@(posedge clk1m or negedge rst) begin
                         SMI_status <= 1;
                     end
                     1: begin
-                        // Configure PHY
+                        //Set Page 7 Register 16 RMII Mode Setting Register to 1111 1111 1111 1110
+                        //Rg_rmii_clkdir = 1 --- Set TXC of Input type
+                        //Rg_rmii_tx_offset = 1111 (Default)
+                        //RG_rmii_r_offset = 1111 (Default)
+                        //RMII Mode = 1 --- Set Reduced MII Mode
+                        //Rg_rmii_rxdv_sel = 1 --- Set CRS/CRS_DV pin as RXDV signal
+                        //Rg_rmii_rxdsel = 1 --- Set RMII data with SSD error
+                        
                         SMI_adr <= 5'd16;
                         SMI_wdata <= 16'hFFE;
 
                         SMI_status <= 2;
                     end
                     2: begin
+                        //
                         SMI_rw <= 1'b1; //read
-
+                        
                         SMI_status <= 3;
                     end
                     3: begin
-                        // Complete PHY configuration
+                        //Set Register 31 Page Select Register to 0
                         SMI_adr <= 5'd31;
                         SMI_wdata <= 16'h0;
                         SMI_rw <= 1'b0; //write
@@ -163,14 +147,14 @@ always_ff@(posedge clk1m or negedge rst) begin
                         SMI_status <= 4;
                     end
                     4: begin
-                        // Enable PHY
+                        //Reads Register 1 Basic Mode Status Register
                         SMI_adr <= 5'd1;
                         SMI_rw <= 1'b1; //read
 
                         SMI_status <= 5;
                     end
                     5: begin
-                        // Check PHY readiness
+                        // If Link Status == 1 (Valid Link established) the PHY is ready
                         if (SMI_data[2]) begin
                             phy_rdy <= 1'b1;
                             SMI_trg <= 1'b0;
